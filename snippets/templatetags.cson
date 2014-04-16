@@ -1,0 +1,37 @@
+'.text.html':
+
+  'Template Tag':
+    'prefix': '%'
+    'body': "{% $1 %}"
+
+  'Template Variable':
+    'prefix': '='
+    'body': "{{ $1 }}"
+
+  'Template if':
+    'prefix': 'if'
+    'body': """
+    {% if %}
+      $1
+    {% endif %}
+    """
+
+  'Template if-else':
+    'prefix': 'ifels'
+    'body': """
+    {% if %}
+      $1
+    {% else %}
+      $2
+    {% endif %}
+    """
+
+  'Template for':
+    'prefix': 'for'
+    'body': """
+    {% for ${1:item} in ${2:items} %}
+      $3
+    {% else %}
+      $4
+    {% endfor %}
+    """
